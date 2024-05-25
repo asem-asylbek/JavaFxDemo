@@ -23,7 +23,7 @@
         <RadioButton fx:id="answer2" maxWidth="Infinity" toggleGroup="$answers" HBox.hgrow="ALWAYS" />
         <RadioButton fx:id="answer3" maxWidth="Infinity" toggleGroup="$answers" HBox.hgrow="ALWAYS" />
         <RadioButton fx:id="answer4" maxWidth="Infinity" toggleGroup="$answers" HBox.hgrow="ALWAYS" />
-        <Button onAction="#tryToAnswer" text="Ответить" />
+        <Button fx:id="answerButton" onAction="#tryToAnswer" text="Ответить" />
         <Button fx:id="nextButton"  onAction="#nextQuestion" text="Следующий вопрос"/>
         <VBox.margin>
             <Insets top="20.0" />

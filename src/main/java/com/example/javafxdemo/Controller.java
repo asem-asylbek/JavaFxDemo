@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
+    public Button answerButton;
     @FXML
     private TextArea questionArea;
 
@@ -36,6 +37,7 @@ public class Controller implements Initializable {
         answer3.setText(questionsAndAnswers[currentQuestionIndex][3]);
         answer4.setText(questionsAndAnswers[currentQuestionIndex][4]);
         answers.selectToggle(null);
+        answerButton.setDisable(false);
     }
     public void tryToAnswer() {
         if(answers.getSelectedToggle() == null){
@@ -57,6 +59,7 @@ public class Controller implements Initializable {
             load();
         } else {
             nextButton.setDisable(true);
+            answerButton.setDisable(true);
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Вы ответили на все вопросы");
             alert.showAndWait();
         }
